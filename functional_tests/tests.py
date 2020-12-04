@@ -78,7 +78,7 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy Milk')
+        self.wait_for_row_in_list_table('2: Buy milk')
 
         francis_list_url = self.browser.current_url
         self.assertRegex(francis_list_url, '/lists/.+')
